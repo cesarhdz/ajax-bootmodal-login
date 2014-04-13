@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ajax BootModal Login\n"
-"POT-Creation-Date: 2014-02-17 22:13+0330\n"
-"PO-Revision-Date: 2014-02-17 22:13+0330\n"
+"POT-Creation-Date: 2014-04-13 09:14+0330\n"
+"PO-Revision-Date: 2014-04-13 09:14+0330\n"
 "Last-Translator: Alimir <info@alimir.ir>\n"
 "Language-Team: Ali Mirzaei <info@alimir.ir>\n"
 "Language: fa_IR\n"
@@ -16,22 +16,27 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../AM_Modal-login.php:64
+#: ../alimir-bootmodal-login.php:65
 msgid "Login"
 msgstr "ورود"
 
-#: ../AM_Modal-login.php:70 ../tmp/login-profile.php:37
+#: ../alimir-bootmodal-login.php:71 ../tmp/login-profile.php:37
 msgid "Profile"
 msgstr "پنل کاربری"
 
-#: ../AM_Modal-login.php:114
+#: ../alimir-bootmodal-login.php:115
 msgid ""
 "<p class=\"alert\" data-alert=\"alert\">Sending user info, please wait...</p>"
 msgstr ""
 "<p class=\"alert\" data-alert=\"alert\">در حال ارسال اطلاعات، لطفا صبور "
 "باشید...</p>"
 
-#: ../AM_Modal-login.php:130
+#: ../alimir-bootmodal-login.php:116
+msgid "<p class=\"alert\" data-alert=\"alert\">Processing Registration...</p>"
+msgstr ""
+"<p class=\"alert\" data-alert=\"alert\">در حال پردازش اطلاعات عضویت...</p>"
+
+#: ../alimir-bootmodal-login.php:135 ../alimir-bootmodal-login.php:161
 msgid ""
 "<p class=\"alert alert-info\" data-alert=\"alert\">Please fill all the "
 "fields.</p>"
@@ -39,15 +44,15 @@ msgstr ""
 "<p class=\"alert alert-info\" data-alert=\"alert\">لطفا تمامی فیلدها را "
 "تکمیل کنید.</p>"
 
-#: ../AM_Modal-login.php:136
+#: ../alimir-bootmodal-login.php:142
 msgid ""
-"<p class=\"alert alert-error\" data-alert=\"alert\">Wrong username or "
-"password.</p>"
+"<p class=\"alert alert-error\" data-alert=\"alert\"><strong>ERROR</strong>: "
+"Wrong username or password.</p>"
 msgstr ""
-"<p class=\"alert alert-error\" data-alert=\"alert\">نام کاربری یا رمز عبور "
-"اشتباه است.</p>"
+"<p class=\"alert alert-error\" data-alert=\"alert\"><strong>خطا</strong>: "
+"نام کاربری یا رمز عبور اشتباه است.</p>"
 
-#: ../AM_Modal-login.php:138
+#: ../alimir-bootmodal-login.php:146
 msgid ""
 "<p class=\"alert alert-success\" data-alert=\"alert\">Login successful, "
 "redirecting...</p>"
@@ -55,7 +60,15 @@ msgstr ""
 "<p class=\"alert alert-success\" data-alert=\"alert\">ورود موفقیت آمیز بود، "
 "در حال انتقال...</p>"
 
-#: ../AM_Modal-login.php:204
+#: ../alimir-bootmodal-login.php:181
+msgid ""
+"<p class=\"alert alert-success\" data-alert=\"alert\">Registration complete. "
+"Please check your e-mail.</p>"
+msgstr ""
+"<p class=\"alert alert-success\" data-alert=\"alert\">نام نویسی با موفقیت "
+"انجام شد. لطفا ایمیل خود را چک کنید</p>"
+
+#: ../alimir-bootmodal-login.php:262
 msgid "Title:"
 msgstr "عنوان:"
 
@@ -63,11 +76,11 @@ msgstr "عنوان:"
 msgid "BootModal Login Settings"
 msgstr "افزونه فرم ورود بوت مودال"
 
-#: ../Settings.php:22
+#: ../Settings.php:23
 msgid "Alimir Ajax BootModal Login"
 msgstr "فرم ورود  Ajax BootModal Login"
 
-#: ../Settings.php:28
+#: ../Settings.php:29
 msgid ""
 "Using <code>[Alimir_BootModal_Login]</code> shortcode, to display ajax "
 "bootmodal login."
@@ -75,52 +88,60 @@ msgstr ""
 "جهت نمایش فرم ورود بوت مودال، از شورت کد <code>[Alimir_BootModal_Login]</"
 "code> در قالب خود استفاده کنید..."
 
-#: ../Settings.php:31
+#: ../Settings.php:32
 msgid "Non-use BootStrap modules"
 msgstr "حذف ماژول های بوت استرپ"
 
-#: ../Settings.php:34
+#: ../Settings.php:35
 msgid "If your theme support bootstrap, Check this option."
 msgstr ""
 "اگر پوسته شما از ماژولهای بوت استرپ پشتیبانی میکند، این گزینه را انتخاب کنید."
 
-#: ../Settings.php:39
+#: ../Settings.php:40
 msgid "Deactivate User Panel"
 msgstr "غیر فعال کردن پنل کاربری"
 
-#: ../Settings.php:42
+#: ../Settings.php:43
 msgid "This option disables user modal profile button."
 msgstr "با انتخاب این گزینه، می توانید پروفایل کاربری افزونه را غیر فعال کنید."
 
-#: ../Settings.php:47
+#: ../Settings.php:48
+msgid "disable user registration?"
+msgstr "غیر فعال سازی بخش ثبت نام"
+
+#: ../Settings.php:51
+msgid "This option disables user registration form."
+msgstr "با استفاده از این گزینه می توانید فرم نام نویسی را غیر فعال کنید."
+
+#: ../Settings.php:56
 msgid "Login Button Text"
 msgstr "متن دکمه ورود"
 
-#: ../Settings.php:52
+#: ../Settings.php:61
 msgid "Profile Button Text"
 msgstr "متن دکمه پروفایل"
 
-#: ../Settings.php:57
+#: ../Settings.php:66
 msgid "Default buttons"
 msgstr "طرح دکمه پیشفرض"
 
-#: ../Settings.php:66
+#: ../Settings.php:75
 msgid "choose your button style."
 msgstr "یک طرح را برای دکمه ورود انتخاب کنید"
 
-#: ../Settings.php:72
+#: ../Settings.php:81
 msgid "Button sizes"
 msgstr "اندازه دکمه پیوند"
 
-#: ../Settings.php:78
+#: ../Settings.php:87
 msgid "choose your button size."
 msgstr "یک سایز را برای دکمه ورود انتخاب کنید."
 
-#: ../Settings.php:83
+#: ../Settings.php:92
 msgid "Like this plugin?"
 msgstr "از این افزونه خوشتون اومد؟"
 
-#: ../Settings.php:85
+#: ../Settings.php:94
 msgid ""
 "Show your support by Rating 5 Star in <a href=\"http://wordpress.org/plugins/"
 "ajax-bootmodal-login\"> Plugin Directory reviews</a>"
@@ -128,14 +149,14 @@ msgstr ""
 "با امتیاز 5 ستاره  در <a href=\"http://wordpress.org/plugins/ajax-bootmodal-"
 "login\">مخزن وردپرس</a> از این افزونه حمایت کنید..."
 
-#: ../Settings.php:86
+#: ../Settings.php:95
 msgid ""
 "Follow me on <a href=\"https://www.facebook.com/alimir.ir\"> Facebook</a>"
 msgstr ""
 "دنیای وردپرس و برنامه نویسی را در  <a href=\"https://www.facebook.com/alimir."
 "ir\"> فیسبوک</a> دنبال کنید..."
 
-#: ../Settings.php:89
+#: ../Settings.php:98
 msgid ""
 "Plugin Author Blog: <a href=\"http://alimir.ir\"> Wordpress & Programming "
 "World.</a>"
@@ -143,19 +164,23 @@ msgstr ""
 "صفحه سازنده افزونه <a href=\"http://alimir.ir\"> دنیای وردپرس و برنامه "
 "نویسی</a>."
 
-#: ../tmp/login-form.php:5
+#: ../tmp/login-form.php:4
 msgid "User Login"
 msgstr "بخش ورود کاربران"
 
-#: ../tmp/login-form.php:10
-msgid "User Name"
+#: ../tmp/login-form.php:9 ../tmp/registrer-form.php:9
+msgid "Username"
 msgstr "نام کاربری"
 
-#: ../tmp/login-form.php:12
+#: ../tmp/login-form.php:11
 msgid "Password"
 msgstr "رمز عبور"
 
-#: ../tmp/login-form.php:17
+#: ../tmp/login-form.php:14
+msgid "Not registered?"
+msgstr "نام نویسی نکرده اید؟!؟"
+
+#: ../tmp/login-form.php:19 ../tmp/registrer-form.php:18
 msgid "Submit"
 msgstr "ورود"
 
@@ -178,6 +203,22 @@ msgstr "نام نمایشی:"
 #: ../tmp/login-profile.php:19
 msgid "E-mail:"
 msgstr "ایمیل:"
+
+#: ../tmp/registrer-form.php:4
+msgid "User Registration"
+msgstr "نام نویسی"
+
+#: ../tmp/registrer-form.php:11
+msgid "E-mail"
+msgstr "ایمیل"
+
+#: ../tmp/registrer-form.php:13
+msgid "Already registered? Login"
+msgstr "پیش از این نام نویسی کرده اید؟ وارد شوید"
+
+#: ../tmp/registrer-form.php:14
+msgid "A password will be emailed to you."
+msgstr "رمز با نامه برای شما فرستاده خواهد شد."
 
 #: ../tmp/inc/recent-comments.php:1
 msgid "Recent Comments"
@@ -251,9 +292,6 @@ msgstr "شما هنوز هیچ پستی را مشاهده نکرده اید."
 
 #~ msgid "After Log Out Redirect Link"
 #~ msgstr "لینک تغییر مسیر خروج کاربران"
-
-#~ msgid "After Register Redirect Link"
-#~ msgstr "لینک تغییر مسیر پس از نام نویسی"
 
 #~ msgid "Select Style"
 #~ msgstr "یک طرح را انتخاب کن:"

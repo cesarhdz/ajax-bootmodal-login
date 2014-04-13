@@ -10,6 +10,7 @@ function alimir_bootModal_create_menu() {
 function alimir_bootModal_register_mysettings() {
 	register_setting( 'alimir-bootModal-settings-group', 'option_checkbox' );	
 	register_setting( 'alimir-bootModal-settings-group', 'option_usermodal' );	
+	register_setting( 'alimir-bootModal-settings-group', 'can_register_option' );	
 	register_setting( 'alimir-bootModal-settings-group', 'button_text' );	
 	register_setting( 'alimir-bootModal-settings-group', 'button_text2' );	
 	register_setting( 'alimir-bootModal-settings-group', 'default_buttons' );
@@ -40,6 +41,14 @@ function alimir_bootModal_settings_page() {
         <td>
 		<input name="option_usermodal" type="checkbox" value="1" <?php checked( '1', get_option( 'option_usermodal' ) ); ?> />
 		<p class="description"><?php _e('This option disables user modal profile button.','alimir'); ?></p>
+		</td>
+        </tr>
+		
+        <tr valign="top">
+        <th scope="row"><?php _e('disable user registration?','alimir'); ?></th>
+        <td>
+		<input name="can_register_option" type="checkbox" value="1" <?php checked( '1', get_option( 'can_register_option' ) ); ?> />
+		<p class="description"><?php _e('This option disables user registration form.','alimir'); ?></p>
 		</td>
         </tr>
 		
