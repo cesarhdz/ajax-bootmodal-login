@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ajax BootModal Login\n"
-"POT-Creation-Date: 2014-04-13 09:14+0330\n"
-"PO-Revision-Date: 2014-04-13 09:14+0330\n"
+"POT-Creation-Date: 2014-04-22 12:27+0330\n"
+"PO-Revision-Date: 2014-04-22 12:27+0330\n"
 "Last-Translator: Alimir <info@alimir.ir>\n"
 "Language-Team: Ali Mirzaei <info@alimir.ir>\n"
 "Language: fa_IR\n"
@@ -24,19 +24,8 @@ msgstr "ورود"
 msgid "Profile"
 msgstr "پنل کاربری"
 
-#: ../alimir-bootmodal-login.php:115
-msgid ""
-"<p class=\"alert\" data-alert=\"alert\">Sending user info, please wait...</p>"
-msgstr ""
-"<p class=\"alert\" data-alert=\"alert\">در حال ارسال اطلاعات، لطفا صبور "
-"باشید...</p>"
-
-#: ../alimir-bootmodal-login.php:116
-msgid "<p class=\"alert\" data-alert=\"alert\">Processing Registration...</p>"
-msgstr ""
-"<p class=\"alert\" data-alert=\"alert\">در حال پردازش اطلاعات عضویت...</p>"
-
-#: ../alimir-bootmodal-login.php:135 ../alimir-bootmodal-login.php:161
+#: ../alimir-bootmodal-login.php:134 ../alimir-bootmodal-login.php:160
+#: ../alimir-bootmodal-login.php:197
 msgid ""
 "<p class=\"alert alert-info\" data-alert=\"alert\">Please fill all the "
 "fields.</p>"
@@ -44,7 +33,7 @@ msgstr ""
 "<p class=\"alert alert-info\" data-alert=\"alert\">لطفا تمامی فیلدها را "
 "تکمیل کنید.</p>"
 
-#: ../alimir-bootmodal-login.php:142
+#: ../alimir-bootmodal-login.php:141
 msgid ""
 "<p class=\"alert alert-error\" data-alert=\"alert\"><strong>ERROR</strong>: "
 "Wrong username or password.</p>"
@@ -52,7 +41,7 @@ msgstr ""
 "<p class=\"alert alert-error\" data-alert=\"alert\"><strong>خطا</strong>: "
 "نام کاربری یا رمز عبور اشتباه است.</p>"
 
-#: ../alimir-bootmodal-login.php:146
+#: ../alimir-bootmodal-login.php:145
 msgid ""
 "<p class=\"alert alert-success\" data-alert=\"alert\">Login successful, "
 "redirecting...</p>"
@@ -60,7 +49,7 @@ msgstr ""
 "<p class=\"alert alert-success\" data-alert=\"alert\">ورود موفقیت آمیز بود، "
 "در حال انتقال...</p>"
 
-#: ../alimir-bootmodal-login.php:181
+#: ../alimir-bootmodal-login.php:180
 msgid ""
 "<p class=\"alert alert-success\" data-alert=\"alert\">Registration complete. "
 "Please check your e-mail.</p>"
@@ -68,7 +57,71 @@ msgstr ""
 "<p class=\"alert alert-success\" data-alert=\"alert\">نام نویسی با موفقیت "
 "انجام شد. لطفا ایمیل خود را چک کنید</p>"
 
-#: ../alimir-bootmodal-login.php:262
+#: ../alimir-bootmodal-login.php:224
+msgid ""
+"<p class=\"alert alert-success\" data-alert=\"alert\">Password Reset. Please "
+"check your email.</p>"
+msgstr ""
+"<p class=\"alert alert-success\" data-alert=\"alert\">رمز عبور جدید فرستاده "
+"شد، لطفا ایمیل خود را بررسی کنید</p>"
+
+#: ../alimir-bootmodal-login.php:239
+msgid "Please enter a username or e-mail address."
+msgstr "لطفا یک شناسه یا ایمیل معتبر بنویسید"
+
+#: ../alimir-bootmodal-login.php:243
+msgid "There is no user registered with that email address."
+msgstr "<strong>خطا</strong>: کاربری با این نشانی ایمیل وجود ندارد."
+
+#: ../alimir-bootmodal-login.php:253
+msgid "Invalid username or e-mail."
+msgstr "<strong>خطا</strong>: شناسه یا نشانی ایمیل نامعتبر است."
+
+#: ../alimir-bootmodal-login.php:265
+msgid "Password reset is not allowed for this user"
+msgstr "این شناسه اجازه‌ی بازسازی کلمه عبور را ندارد"
+
+#: ../alimir-bootmodal-login.php:278
+msgid "Someone requested that the password be reset for the following account:"
+msgstr "کسی درخواست به‌روز رسانی رمز این حساب را داده است:"
+
+#: ../alimir-bootmodal-login.php:280
+#, php-format
+msgid "Username: %s"
+msgstr "کاربر گرامی: %s"
+
+#: ../alimir-bootmodal-login.php:281
+msgid "If this was a mistake, just ignore this email and nothing will happen."
+msgstr ""
+"اگر اشتباهی رخ داده، کافیست‌ این نامه را نادیده بگیرید و هیچ اتفاقی نخواهد "
+"افتاد."
+
+#: ../alimir-bootmodal-login.php:282
+msgid "To reset your password, visit the following address:"
+msgstr "جهت بازیابی رمز عبور، لینک زیر را دنبال کنید:"
+
+#: ../alimir-bootmodal-login.php:284
+msgid "powered by < http://wordpress.org/plugins/ajax-bootmodal-login >"
+msgstr "قدرت گرفته از < http://wordpress.org/plugins/ajax-bootmodal-login >"
+
+#: ../alimir-bootmodal-login.php:285
+msgid "Ali Mizraei < http://alimir.ir >"
+msgstr "علی میرزائی < http://alimir.ir >"
+
+#: ../alimir-bootmodal-login.php:293
+#, php-format
+msgid "[%s] Password Reset"
+msgstr "[%s] نوسازی رمز"
+
+#: ../alimir-bootmodal-login.php:298
+msgid ""
+"The e-mail could not be sent.<br />Possible reason: your host may have "
+"disabled the mail() function."
+msgstr ""
+"ایمیل نمی‌تواند فرستاده شود.<br />دلیل ممکن: میزبان شما ممکن است تابع mail() "
+"را از کار انداخته باشد."
+
+#: ../alimir-bootmodal-login.php:384
 msgid "Title:"
 msgstr "عنوان:"
 
@@ -180,7 +233,12 @@ msgstr "رمز عبور"
 msgid "Not registered?"
 msgstr "نام نویسی نکرده اید؟!؟"
 
-#: ../tmp/login-form.php:19 ../tmp/registrer-form.php:18
+#: ../tmp/login-form.php:15
+msgid "Lost your password?"
+msgstr "رمزتان را گم کرده اید؟"
+
+#: ../tmp/login-form.php:20 ../tmp/lostpass-form.php:16
+#: ../tmp/registrer-form.php:18
 msgid "Submit"
 msgstr "ورود"
 
@@ -203,6 +261,26 @@ msgstr "نام نمایشی:"
 #: ../tmp/login-profile.php:19
 msgid "E-mail:"
 msgstr "ایمیل:"
+
+#: ../tmp/lostpass-form.php:4
+msgid "User LostPassword"
+msgstr "بازیابی رمز عبور"
+
+#: ../tmp/lostpass-form.php:7
+msgid ""
+"Please enter your username or email address. You will receive a link to "
+"create a new password via email."
+msgstr ""
+"شناسه یا ایمیل خود را‌ وارد کنید. شما از طریق ایمیل، پیوندی برای تنظیم رمز "
+"تازه دریافت خواهید کرد."
+
+#: ../tmp/lostpass-form.php:10
+msgid "Username or Email"
+msgstr "نام کاربری یا ایمیل"
+
+#: ../tmp/lostpass-form.php:12
+msgid "Log in"
+msgstr "ورود"
 
 #: ../tmp/registrer-form.php:4
 msgid "User Registration"
@@ -235,6 +313,18 @@ msgstr "آخرین پست هایی که مشاهده کرده اید:"
 #: ../tmp/inc/recent-Viewed.php:13
 msgid "You have not viewed any posts recently."
 msgstr "شما هنوز هیچ پستی را مشاهده نکرده اید."
+
+#~ msgid ""
+#~ "<p class=\"alert\" data-alert=\"alert\">Sending user info, please wait..."
+#~ "</p>"
+#~ msgstr ""
+#~ "<p class=\"alert\" data-alert=\"alert\">در حال ارسال اطلاعات، لطفا صبور "
+#~ "باشید...</p>"
+
+#~ msgid ""
+#~ "<p class=\"alert\" data-alert=\"alert\">Processing Registration...</p>"
+#~ msgstr ""
+#~ "<p class=\"alert\" data-alert=\"alert\">در حال پردازش اطلاعات عضویت...</p>"
 
 #~ msgid "I want this to be my logo!"
 #~ msgstr "این تصویر را به عنوان لوگو انتخاب میکنم!"

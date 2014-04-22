@@ -14,6 +14,10 @@
 .modal-open {
 	overflow: hidden;
 }
+.loader{
+	background:url(loader.GIF) no-repeat;
+	height:24px;
+}
 
 
 /* add a scroll bar to stop page from jerking around */

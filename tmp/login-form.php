@@ -12,6 +12,7 @@
         <input type="password" name="password" id="password" class="span12" value="" /></label>
 		<?php if (get_option( 'can_register_option' ) != 1): ?>
 		<span class="label label-important"><a href="#register_tab" data-toggle="tab"><?php _e('Not registered?','alimir'); ?></a></span>
+		<span class="label label-info"><a href="#lostpass_tab" data-toggle="tab"><?php _e('Lost your password?','alimir'); ?></a></span>
 		<?php endif; ?>
     </div>
   </div>
