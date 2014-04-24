@@ -1,16 +1,18 @@
 === Ajax BootModal Login ===
 Contributors: alimir
+Donate link: http://alimir.ir
 Author: Ali Mirzaei
 Tags: login,wordpress Login,Wordpress ABM-Login Plugin,ABM Login,bootstrap login form,custom login widget,wordpress modal login,wp ajax login,wordpress login with bootstrap,ajaxy
 Requires at least: 3.1
 Tested up to: 3.9
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 wordpress modal login, poweres by bootstrap and ajax for better login/registration/lostpassword.
 
 == Description ==
+Live Preview: <a target="_blank" href="http://preview.alimir.ir/ajax-bootmodal-login-plugin/">Ajax Bootmodal Login</a>
 
 wordpress modal login, poweres by bootstrap and ajax. you can use this plugin for better login/registration/lostpassword and show user profile with beautiful shape.
 be happy :) 
@@ -36,6 +38,10 @@ Facebook : <a href="https://www.facebook.com/alimir.ir" target="_blank">Wordpres
 
 == Changelog ==
 
+= 1.0.3 =
+* customize bootstrap modules.
+* add shake effect to modal window.
+
 = 1.0.2 =
 * Add lostPassword form.
 * Add loading animation in ajax beforeSend.
@@ -48,6 +54,9 @@ Facebook : <a href="https://www.facebook.com/alimir.ir" target="_blank">Wordpres
 * The initial version
 
 == Upgrade Notice ==
+
+= 1.0.3 =
+customize bootstrap modules & add shake effect to modal window
 
 = 1.0.2 =
 add lostPassword form & loading animation in ajax beforeSend

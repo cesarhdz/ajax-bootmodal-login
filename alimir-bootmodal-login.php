@@ -4,7 +4,7 @@
 Plugin Name: Ajax BootModal Login
 Plugin URI: http://wordpress.org/plugins/ajax-bootmodal-login
 Description: wordpress modal login, poweres by bootstrap and ajax. you can use this plugin for better login and show user profile with new shape.
-Version: 1.0.2
+Version: 1.0.3
 Author: Ali Mirzaei
 Author URI: http://alimir.ir
 License: GPLv2 or later
@@ -13,14 +13,14 @@ License: GPLv2 or later
 load_plugin_textdomain( 'alimir', false, dirname( plugin_basename( __FILE__ ) ) .'/lang/' );
 
 if(is_admin()):
-	include( plugin_dir_path( __FILE__ ) . 'Settings.php');
+include( plugin_dir_path( __FILE__ ) . 'Settings.php');
 endif;
+include( plugin_dir_path( __FILE__ ) . 'tmp/setting-functions.php');
 
 function alimir_bootModal_method() {
 	if (get_option( 'option_checkbox' ) != 1):
-	if (!is_rtl()):
 	wp_enqueue_style( 'bootstrap', plugins_url('assets/css/bootstrap.min.css', __FILE__) );
-	else:
+	if (is_rtl()):
 	wp_enqueue_style( 'rtl-bootstrap', plugins_url('assets/css/rtl-bootstrap.min.css', __FILE__) );
 	endif;
 	wp_enqueue_script(
@@ -58,46 +58,6 @@ function  alimir_bootModal_login_shortcode(){
 	endif;
 }
 add_shortcode( 'Alimir_BootModal_Login', 'alimir_bootModal_login_shortcode' );
-
-function login_button_text(){
-	if (!is_user_logged_in()):
-	if (get_option('button_text') == null):
-		return __('Login','alimir');
-	else:
-		return get_option('button_text');
-	endif;
-	else:
-	if (get_option('button_text2') == null):
-		return __('Profile','alimir');
-	else:
-		return get_option('button_text2');
-	endif;	
-	endif;	
-}
-
-function default_buttons(){
-	if (get_option( 'default_buttons' )==0)
-	return 'btn-primary';
-	else if (get_option( 'default_buttons' )==1)
-	return 'btn-info';
-	else if (get_option( 'default_buttons' )==2)
-	return 'btn-success';
-	else if (get_option( 'default_buttons' )==3)
-	return 'btn-warning';
-	else if (get_option( 'default_buttons' )==4)
-	return 'btn-danger';
-	else if (get_option( 'default_buttons' )==5)
-	return 'btn-inverse';
-}
-
-function default_sizes(){
-	if (get_option( 'default_sizes' )==0)
-	return 'btn-large';
-	else if (get_option( 'default_sizes' )==1)
-	return 'btn-small';
-	else if (get_option( 'default_sizes' )==2)
-	return 'btn-mini';
-}
 
 function alimir_bootModal_ajax_login_init(){
 	if (!is_admin()) :
@@ -310,7 +270,7 @@ function alimir_bootModal_ajax_lostPassword_retrieve( $user_data ) {
 function alimir_bootModal_form() {
 	if (!is_user_logged_in()) :
 		?>
-		<div id="alimir_bootmodal" class="modal hide fade" tabindex="-1" data-width="360">
+		<div id="alimir_bootmodal" class="modal hide fade" tabindex="-1" data-width="370" data-backdrop="static" data-keyboard="false">
 		<div class="tab-content">
 		<div class="tab-pane active fade in" id="login_tab">		
 		<?php include( plugin_dir_path( __FILE__ ) . 'tmp/login-form.php'); ?>

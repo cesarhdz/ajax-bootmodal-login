@@ -63,7 +63,7 @@ jQuery(document).ready(function($) {
 			e.preventDefault();
 	});	
 	
-	$("#register_tab a,#lostpass_tab a,#login_tab a").click(function(){
+	$("#register_tab a,#lostpass_tab a,#login_tab a,.close").click(function(){
 		$('div.status').slideUp();
 	});
 });
