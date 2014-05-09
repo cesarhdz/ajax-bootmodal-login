@@ -1,6 +1,10 @@
 jQuery(document).ready(function($) {
     // Perform AJAX login on form submit
     $('form#login').on('submit', function(e){
+			var checkbox_value = "";
+			if ($('#rememberme').is(":checked")) {
+				checkbox_value = $('form#login #rememberme').val();
+			}	
 			$.ajax({
 				type: 'POST',
 				dataType: 'json',
@@ -8,7 +12,8 @@ jQuery(document).ready(function($) {
 				data: { 
 					'action': 'ajaxlogin', //calls wp_ajax_nopriv_ajaxlogin
 					'username': $('form#login #username').val(), 
-					'password': $('form#login #password').val(), 
+					'password': $('form#login #password').val(),
+					'rememberme': checkbox_value,
 					'security': $('form#login #security').val() },
 				beforeSend:function(){
 				$('form#login div.status').show().html('<div class="loader"></div>');

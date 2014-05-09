@@ -5,24 +5,31 @@ Author: Ali Mirzaei
 Tags: login,wordpress Login,Wordpress ABM-Login Plugin,ABM Login,bootstrap login form,custom login widget,wordpress modal login,wp ajax login,wordpress login with bootstrap,ajaxy
 Requires at least: 3.1
 Tested up to: 3.9
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-wordpress modal login, poweres by bootstrap and ajax for better login/registration/lostpassword.
+Ajax BootModal Login is a WordPress plugin that is powered by bootstrap and ajax for better login, registration or lost password.
 
 == Description ==
-Live Preview: <a target="_blank" href="http://preview.alimir.ir/ajax-bootmodal-login-plugin/">Ajax Bootmodal Login</a>
+Live Preview: <a target="_blank" href="http://preview.alimir.ir/ajax-bootmodal-login-plugin/">Click Here</a>
 
-wordpress modal login, poweres by bootstrap and ajax. you can use this plugin for better login/registration/lostpassword and show user profile with beautiful shape.
-be happy :) 
+Ajax BootModal Login is a WordPress plugin that is powered by bootstrap and ajax for better login, registration or lost password and display the user profile with beautiful shape. It is an easy to use WordPress plugin and can be configured quickly.
+
+= Features =
+
+*   Bootstrap support.
+*   Simple configuration panel.
+*   Full ajax login, registration and lost password forms.
+*   User profile support.
+*   And so on...
 
 = How To Use This Plugin?!? =
 * Just install the plugin and use `[Alimir_BootModal_Login]` shortcode or drag `Ajax BootModal Login` widget in widget area.
 
-= Follow Me... =
-Website : <a href="http://alimir.ir" target="_blank">Ali Mirzaei</a><br />
-Facebook : <a href="https://www.facebook.com/alimir.ir" target="_blank">Wordpress And Programming World</a>
+= Plugin Author =
+My personal website: <a href="http://about.alimir.ir" target="_blank">Ali Mirzaei</a><br />
+Follow me on <a href="https://www.facebook.com/alimir.ir" target="_blank">facebook</a>
 
 == Installation ==
 
@@ -31,12 +38,13 @@ Facebook : <a href="https://www.facebook.com/alimir.ir" target="_blank">Wordpres
 
 == Screenshots ==
 
-1. Alimir BootModal Login
-2. Alimir BootModal Profile
-3. Alimir BootModal Settings
-3. Alimir BootModal Widget
+Screenshots are available in <a href="http://preview.alimir.ir/ajax-bootmodal-login-plugin/" target="_blank">here</a>
 
 == Changelog ==
+
+= 1.0.4 =
+* Add Remember me checkbox.
+* Update readme file.
 
 = 1.0.3 =
 * customize bootstrap modules.
@@ -54,6 +62,9 @@ Facebook : <a href="https://www.facebook.com/alimir.ir" target="_blank">Wordpres
 * The initial version
 
 == Upgrade Notice ==
+
+= 1.0.4 =
+Add Remember me checkbox & update readme file
 
 = 1.0.3 =
 customize bootstrap modules & add shake effect to modal window
