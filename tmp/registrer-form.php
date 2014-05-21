@@ -15,7 +15,7 @@
     </div>
   </div>
   <div class="modal-footer">
-        <button type="submit" name="pass-sumbit" id="pass-submit" class="btn <?php echo default_buttons(); ?> <?php echo default_sizes(); ?> btn-block"><?php _e('Submit','alimir'); ?></button>
+        <button type="submit" name="pass-sumbit" id="pass-submit" class="btn <?php echo default_buttons(); ?> <?php echo default_sizes(); ?> btn-block" data-loading-text="<?php _e('loading...','alimir'); ?>"><?php _e('Submit','alimir'); ?></button>
 		<input type="hidden" name="register" value="true" />
   </div>
    <?php wp_nonce_field( 'ajax-form-nonce', 'security2' ); ?>

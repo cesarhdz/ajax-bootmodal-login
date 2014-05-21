@@ -20,7 +20,7 @@
     </div>
   </div>
   <div class="modal-footer">
-        <button type="submit" name="submit" id="wp-submit" class="btn <?php echo default_buttons(); ?> <?php echo default_sizes(); ?> btn-block"><?php _e('Submit','alimir'); ?></button>
+        <button type="submit" name="submit" id="wp-submit" class="btn <?php echo default_buttons(); ?> <?php echo default_sizes(); ?> btn-block" data-loading-text="<?php _e('loading...','alimir'); ?>"><?php _e('Submit','alimir'); ?></button>
   </div>
    <?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
-  </form>
+</form>

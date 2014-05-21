@@ -14,10 +14,6 @@
 .modal-open {
 	overflow: hidden;
 }
-.loader{
-	background:url(loader.GIF) no-repeat;
-	height:24px;
-}
 
 
 /* add a scroll bar to stop page from jerking around */
@@ -174,7 +170,6 @@
 /*
 Animate.css - http://daneden.me/animate
 Licensed under the ☺ license (http://licence.visualidiot.com/)
-
 Copyright (c) 2012 Dan Eden*/
 
 .animated {

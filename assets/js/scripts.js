@@ -4,24 +4,27 @@ jQuery(document).ready(function($) {
 			var checkbox_value = "";
 			if ($('#rememberme').is(":checked")) {
 				checkbox_value = $('form#login #rememberme').val();
-			}	
+			}
 			$.ajax({
 				type: 'POST',
 				dataType: 'json',
 				url: ajax_login_object.ajaxurl,
-				data: { 
+				data: {
 					'action': 'ajaxlogin', //calls wp_ajax_nopriv_ajaxlogin
 					'username': $('form#login #username').val(), 
 					'password': $('form#login #password').val(),
 					'rememberme': checkbox_value,
 					'security': $('form#login #security').val() },
 				beforeSend:function(){
-				$('form#login div.status').show().html('<div class="loader"></div>');
+					$('#wp-submit').button('loading');
+					$('body').modalmanager('loading');
 				},	
 				success: function(data){
+					$('body').modalmanager('removeLoading');
+					$('#wp-submit').button('reset');
 					$('form#login div.status').html(data.message).fadeIn();
 					if (data.loggedin == true){
-						document.location.href = ajax_login_object.redirecturl;
+						document.location.href = ajax_login_object.loginRedirectURL;
 					}
 				}
 			});
@@ -39,10 +42,16 @@ jQuery(document).ready(function($) {
 					'user_email': $('form#regform #user_email').val(), 
 					'security2': $('form#regform #security2').val() },
 				beforeSend:function(){
-				$('form#regform div.status').show().html('<div class="loader"></div>');
+					$('#pass-submit').button('loading');
+					$('body').modalmanager('loading');
 				},						
 				success: function(data){
+					$('body').modalmanager('removeLoading');
+					$('#pass-submit').button('reset');
 					$('form#regform div.status').html(data.message).fadeIn();
+					if (data.registered == true && ajax_login_object.registerRedirectURL!=''){
+						document.location.href = ajax_login_object.registerRedirectURL;
+					}					
 				}
 			});
 		e.preventDefault();
@@ -59,9 +68,12 @@ jQuery(document).ready(function($) {
 					'security3'   : 	$('form#passform #security3').val()
 				},
 				beforeSend:function(){
-				$('form#passform div.status').show().html('<div class="loader"></div>');
+					$('#user-submit').button('loading');
+					$('body').modalmanager('loading');
 				},								
 				success: function(data){
+					$('body').modalmanager('removeLoading');
+					$('#user-submit').button('reset');
 					$('form#passform div.status').html(data.message).fadeIn();
 				}
 			});

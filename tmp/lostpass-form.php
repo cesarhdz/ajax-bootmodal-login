@@ -13,7 +13,7 @@
     </div>
   </div>
   <div class="modal-footer">
-        <button type="submit" name="user-sumbit" id="user-submit" class="btn <?php echo default_buttons(); ?> <?php echo default_sizes(); ?> btn-block"><?php _e('Submit','alimir'); ?></button>
+        <button type="submit" name="user-sumbit" id="user-submit" class="btn <?php echo default_buttons(); ?> <?php echo default_sizes(); ?> btn-block" data-loading-text="<?php _e('loading...','alimir'); ?>"><?php _e('Submit','alimir'); ?></button>
 		<input type="hidden" name="forgotten" value="true" />
   </div>
    <?php wp_nonce_field( 'ajax-form-nonce', 'security3' ); ?>

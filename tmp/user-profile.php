@@ -2,7 +2,7 @@
 	global $current_user; 
 ?>
 
-<div id="alimir_bootmodal" class="modal hide fade" tabindex="-1" data-width="370" data-backdrop="static" data-keyboard="false">
+<div id="alimir_bootmodal" class="modal fade" tabindex="-1" data-width="370" data-backdrop="static" data-keyboard="false" style="display: none;">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&#215;</button>
     <h3><?php _e('Welcome Dear','alimir'); ?> <?php get_currentuserinfo(); echo $current_user->user_login; ?></h3>

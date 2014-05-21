@@ -38,4 +38,22 @@ function default_sizes(){
 	else if (get_option( 'default_sizes' )==2)
 	return 'btn-mini';
 }
+
+// Update User View
+
+function alimir_bootModal_update_user_view() {
+	if (is_user_logged_in() && is_single()) :
+		
+		global $post;
+		$user_id = get_current_user_id();
+		$posts = get_user_meta( $user_id, 'alimir_viewed_posts', true );
+		if (!is_array($posts)) $posts = array();
+		if (sizeof($posts)>4) array_shift($posts);
+		if (!in_array($post->ID, $posts)) $posts[] = $post->ID;
+		update_user_meta( $user_id, 'alimir_viewed_posts', $posts );
+		
+	endif;
+}
+add_action('wp_head', 'alimir_bootModal_update_user_view');
+
 ?>
