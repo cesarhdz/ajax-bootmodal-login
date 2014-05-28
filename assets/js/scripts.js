@@ -13,6 +13,7 @@ jQuery(document).ready(function($) {
 					'action': 'ajaxlogin', //calls wp_ajax_nopriv_ajaxlogin
 					'username': $('form#login #username').val(), 
 					'password': $('form#login #password').val(),
+					'login_captcha': $('form#login #login_captcha').val(),
 					'rememberme': checkbox_value,
 					'security': $('form#login #security').val() },
 				beforeSend:function(){
@@ -40,6 +41,7 @@ jQuery(document).ready(function($) {
 					'action': 'ajaxregister', //calls wp_ajax_nopriv_ajaxlogin
 					'user_login': $('form#regform #user_login').val(), 
 					'user_email': $('form#regform #user_email').val(), 
+					'register_captcha': $('form#regform #register_captcha').val(), 
 					'security2': $('form#regform #security2').val() },
 				beforeSend:function(){
 					$('#pass-submit').button('loading');
@@ -56,7 +58,7 @@ jQuery(document).ready(function($) {
 			});
 		e.preventDefault();
 	});
-	// Perform AJAX password on form submit
+	// Perform AJAX resetpass on form submit
 	$('form#passform').on('submit', function(e) {
 			$.ajax({
 				type: 'POST',
@@ -65,6 +67,7 @@ jQuery(document).ready(function($) {
 				data: {
 					'action'     : 	'ajaxlostpass', // Calls our wp_ajax_nopriv_ajaxlogin
 					'lost_pass'   : 	$('form#passform #lost_pass').val(),
+					'lostpass_captcha'   : 	$('form#passform #lostpass_captcha').val(),
 					'security3'   : 	$('form#passform #security3').val()
 				},
 				beforeSend:function(){
@@ -78,8 +81,39 @@ jQuery(document).ready(function($) {
 				}
 			});
 			e.preventDefault();
-	});	
-	
+	});
+	// refresh login captcha
+	$("#login_captcha_img").click(function() {
+    $.ajax({
+    url: ajax_login_object.captchaLink + "log-captcha.php",
+    success: function(result) {
+        $("#login_captcha_img").attr("src",ajax_login_object.captchaLink + "log-captcha.php");
+    }
+	});
+	});
+	// refresh register captcha
+	$("#register_captcha_img").click(function() {
+    $.ajax({
+    url: ajax_login_object.captchaLink + "reg-captcha.php",
+    success: function(result) {
+        $("#register_captcha_img").attr("src",ajax_login_object.captchaLink + "reg-captcha.php");
+    }
+	});
+	});
+	// refresh lostpass captcha
+	$("#lostpass_captcha_img").click(function() {
+    $.ajax({
+    url: ajax_login_object.captchaLink + "lost-captcha.php",
+    success: function(result) {
+        $("#lostpass_captcha_img").attr("src",ajax_login_object.captchaLink + "lost-captcha.php");
+    }
+	});
+	});
+	// enable tooltip
+	$(function () {
+		$("[data-toggle='tooltip']").tooltip();
+	});
+	// remove status box
 	$("#register_tab a,#lostpass_tab a,#login_tab a,.close").click(function(){
 		$('div.status').slideUp();
 	});

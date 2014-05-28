@@ -14,6 +14,9 @@ function alimir_bootModal_register_mysettings() {
 	register_setting( 'alimir-bootModal-settings-group', 'can_register_option' );	
 	register_setting( 'alimir-bootModal-settings-group', 'button_text' );	
 	register_setting( 'alimir-bootModal-settings-group', 'button_text2' );	
+	register_setting( 'alimir-bootModal-settings-group', 'enable_login_captcha' );	
+	register_setting( 'alimir-bootModal-settings-group', 'enable_register_captcha' );	
+	register_setting( 'alimir-bootModal-settings-group', 'enable_lostpass_captcha' );	
 	register_setting( 'alimir-bootModal-settings-group', 'default_buttons' );
 	register_setting( 'alimir-bootModal-settings-group', 'default_sizes' );
 	register_setting( 'alimir-bootModal-settings-group', 'alimir_login_redirect' );
@@ -72,6 +75,30 @@ function alimir_bootModal_settings_page() {
         <th scope="row"><?php _e('Profile Button Text','alimir'); ?></th>
         <td><input type="text" name="button_text2" value="<?php echo get_option('button_text2'); ?>" /></td>
         </tr>
+		
+        <tr valign="top">
+        <th scope="row"><?php _e('Enable login captcha','alimir'); ?></th>
+        <td>
+		<input name="enable_login_captcha" type="checkbox" value="1" <?php checked( '1', get_option( 'enable_login_captcha' ) ); ?> />
+		<p class="description"><?php _e('This option enables captcha on login form.','alimir'); ?></p>
+		</td>
+        </tr>
+		
+        <tr valign="top">
+        <th scope="row"><?php _e('Enable register captcha','alimir'); ?></th>
+        <td>
+		<input name="enable_register_captcha" type="checkbox" value="1" <?php checked( '1', get_option( 'enable_register_captcha' ) ); ?> />
+		<p class="description"><?php _e('This option enables captcha on registration form.','alimir'); ?></p>
+		</td>
+        </tr>
+		
+        <tr valign="top">
+        <th scope="row"><?php _e('Enable lostpass captcha','alimir'); ?></th>
+        <td>
+		<input name="enable_lostpass_captcha" type="checkbox" value="1" <?php checked( '1', get_option( 'enable_lostpass_captcha' ) ); ?> />
+		<p class="description"><?php _e('This option enables captcha on lostpass form.','alimir'); ?></p>
+		</td>
+        </tr>		
 		
         <tr valign="top">
         <th scope="row"><?php _e('Default buttons','alimir'); ?></th>

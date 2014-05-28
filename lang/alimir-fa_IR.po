@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ajax BootModal Login\n"
-"POT-Creation-Date: 2014-05-21 17:43+0330\n"
-"PO-Revision-Date: 2014-05-21 17:44+0330\n"
+"POT-Creation-Date: 2014-05-28 11:41+0330\n"
+"PO-Revision-Date: 2014-05-28 11:43+0330\n"
 "Last-Translator: Alimir <info@alimir.ir>\n"
 "Language-Team: Ali Mirzaei <info@alimir.ir>\n"
 "Language: fa_IR\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../inc/authenticate.php:44 ../inc/authenticate.php:70
-#: ../inc/authenticate.php:107
+#: ../inc/authenticate.php:48 ../inc/authenticate.php:81
+#: ../inc/authenticate.php:126
 msgid ""
 "<p class=\"alert alert-info\" data-alert=\"alert\">Please fill all the "
 "fields.</p>"
@@ -25,7 +25,14 @@ msgstr ""
 "<p class=\"alert alert-info\" data-alert=\"alert\">لطفا تمامی فیلدها را "
 "تکمیل کنید.</p>"
 
-#: ../inc/authenticate.php:51
+#: ../inc/authenticate.php:51 ../inc/authenticate.php:84
+#: ../inc/authenticate.php:129
+msgid ""
+"<p class=\"alert alert-error\" data-alert=\"alert\">captcha invalid.</p>"
+msgstr ""
+"<p class=\"alert alert-error\" data-alert=\"alert\">کد امنیتی اشتباه است.</p>"
+
+#: ../inc/authenticate.php:58
 msgid ""
 "<p class=\"alert alert-error\" data-alert=\"alert\"><strong>ERROR</strong>: "
 "Wrong username or password.</p>"
@@ -33,7 +40,7 @@ msgstr ""
 "<p class=\"alert alert-error\" data-alert=\"alert\"><strong>خطا</strong>: "
 "نام کاربری یا رمز عبور اشتباه است.</p>"
 
-#: ../inc/authenticate.php:55
+#: ../inc/authenticate.php:62
 msgid ""
 "<p class=\"alert alert-success\" data-alert=\"alert\">Login successful, "
 "redirecting...</p>"
@@ -41,7 +48,7 @@ msgstr ""
 "<p class=\"alert alert-success\" data-alert=\"alert\">ورود موفقیت آمیز بود، "
 "در حال انتقال...</p>"
 
-#: ../inc/authenticate.php:90
+#: ../inc/authenticate.php:104
 msgid ""
 "<p class=\"alert alert-success\" data-alert=\"alert\">Registration complete. "
 "Please check your e-mail.</p>"
@@ -49,7 +56,7 @@ msgstr ""
 "<p class=\"alert alert-success\" data-alert=\"alert\">نام نویسی با موفقیت "
 "انجام شد. لطفا ایمیل خود را چک کنید</p>"
 
-#: ../inc/authenticate.php:134
+#: ../inc/authenticate.php:156
 msgid ""
 "<p class=\"alert alert-success\" data-alert=\"alert\">Password Reset. Please "
 "check your email.</p>"
@@ -57,55 +64,55 @@ msgstr ""
 "<p class=\"alert alert-success\" data-alert=\"alert\">رمز عبور جدید فرستاده "
 "شد، لطفا ایمیل خود را بررسی کنید</p>"
 
-#: ../inc/authenticate.php:149
+#: ../inc/authenticate.php:171
 msgid "Please enter a username or e-mail address."
 msgstr "لطفا یک شناسه یا ایمیل معتبر بنویسید"
 
-#: ../inc/authenticate.php:153
+#: ../inc/authenticate.php:175
 msgid "There is no user registered with that email address."
 msgstr "<strong>خطا</strong>: کاربری با این نشانی ایمیل وجود ندارد."
 
-#: ../inc/authenticate.php:163
+#: ../inc/authenticate.php:185
 msgid "Invalid username or e-mail."
 msgstr "<strong>خطا</strong>: شناسه یا نشانی ایمیل نامعتبر است."
 
-#: ../inc/authenticate.php:175
+#: ../inc/authenticate.php:197
 msgid "Password reset is not allowed for this user"
 msgstr "این شناسه اجازه‌ی بازسازی کلمه عبور را ندارد"
 
-#: ../inc/authenticate.php:188
+#: ../inc/authenticate.php:210
 msgid "Someone requested that the password be reset for the following account:"
 msgstr "کسی درخواست به‌روز رسانی رمز این حساب را داده است:"
 
-#: ../inc/authenticate.php:190
+#: ../inc/authenticate.php:212
 #, php-format
 msgid "Username: %s"
 msgstr "کاربر گرامی: %s"
 
-#: ../inc/authenticate.php:191
+#: ../inc/authenticate.php:213
 msgid "If this was a mistake, just ignore this email and nothing will happen."
 msgstr ""
 "اگر اشتباهی رخ داده، کافیست‌ این نامه را نادیده بگیرید و هیچ اتفاقی نخواهد "
 "افتاد."
 
-#: ../inc/authenticate.php:192
+#: ../inc/authenticate.php:214
 msgid "To reset your password, visit the following address:"
 msgstr "جهت بازیابی رمز عبور، لینک زیر را دنبال کنید:"
 
-#: ../inc/authenticate.php:194
+#: ../inc/authenticate.php:216
 msgid "powered by < http://wordpress.org/plugins/ajax-bootmodal-login >"
 msgstr "قدرت گرفته از < http://wordpress.org/plugins/ajax-bootmodal-login >"
 
-#: ../inc/authenticate.php:195
+#: ../inc/authenticate.php:217
 msgid "Ali Mizraei < http://alimir.ir >"
 msgstr "علی میرزائی < http://alimir.ir >"
 
-#: ../inc/authenticate.php:203
+#: ../inc/authenticate.php:225
 #, php-format
 msgid "[%s] Password Reset"
 msgstr "[%s] نوسازی رمز"
 
-#: ../inc/authenticate.php:208
+#: ../inc/authenticate.php:230
 msgid ""
 "The e-mail could not be sent.<br />Possible reason: your host may have "
 "disabled the mail() function."
@@ -125,11 +132,11 @@ msgstr "پنل کاربری"
 msgid "BootModal Login Settings"
 msgstr "افزونه فرم ورود بوت مودال"
 
-#: ../inc/settings.php:26
+#: ../inc/settings.php:29
 msgid "Alimir Ajax BootModal Login"
 msgstr "فرم ورود  Ajax BootModal Login"
 
-#: ../inc/settings.php:32
+#: ../inc/settings.php:35
 msgid ""
 "Using <code>[Alimir_BootModal_Login]</code> shortcode, to display ajax "
 "bootmodal login."
@@ -137,78 +144,104 @@ msgstr ""
 "جهت نمایش فرم ورود بوت مودال، از شورت کد <code>[Alimir_BootModal_Login]</"
 "code> در قالب خود استفاده کنید..."
 
-#: ../inc/settings.php:35
+#: ../inc/settings.php:38
 msgid "Non-use BootStrap modules"
 msgstr "حذف ماژول های بوت استرپ"
 
-#: ../inc/settings.php:38
+#: ../inc/settings.php:41
 msgid "If your theme support bootstrap, Check this option."
 msgstr ""
 "اگر پوسته شما از ماژولهای بوت استرپ پشتیبانی میکند، این گزینه را انتخاب کنید."
 
-#: ../inc/settings.php:43
+#: ../inc/settings.php:46
 msgid "Do you use from bootstrap +3?"
 msgstr "آیا از بوت استرپ +3 استفاده می کنید؟"
 
-#: ../inc/settings.php:46
+#: ../inc/settings.php:49
 msgid "If you use from bootstrap +3 in your theme, Check this option."
 msgstr ""
 "اگر پوسته سایت شما از نسخه +3 بوت استرپ بهره گیری کرده است، تیک این گزینه را "
 "بزنید."
 
-#: ../inc/settings.php:51
+#: ../inc/settings.php:54
 msgid "Deactivate User Panel"
 msgstr "غیر فعال کردن پنل کاربری"
 
-#: ../inc/settings.php:54
+#: ../inc/settings.php:57
 msgid "This option disables user modal profile button."
 msgstr "با انتخاب این گزینه، می توانید پروفایل کاربری افزونه را غیر فعال کنید."
 
-#: ../inc/settings.php:59
+#: ../inc/settings.php:62
 msgid "disable user registration?"
 msgstr "غیر فعال سازی بخش ثبت نام"
 
-#: ../inc/settings.php:62
+#: ../inc/settings.php:65
 msgid "This option disables user registration form."
 msgstr "با استفاده از این گزینه می توانید فرم نام نویسی را غیر فعال کنید."
 
-#: ../inc/settings.php:67
+#: ../inc/settings.php:70
 msgid "Login Button Text"
 msgstr "متن دکمه ورود"
 
-#: ../inc/settings.php:72
+#: ../inc/settings.php:75
 msgid "Profile Button Text"
 msgstr "متن دکمه پروفایل"
 
-#: ../inc/settings.php:77
+#: ../inc/settings.php:80
+msgid "Enable login captcha"
+msgstr "کد امنیتی را در فرم ورود فعال کن!"
+
+#: ../inc/settings.php:83
+msgid "This option enables captcha on login form."
+msgstr "با فعال کردن این گزینه، می توانید کد امنیتی را در فرم ورود، فعال کنید."
+
+#: ../inc/settings.php:88
+msgid "Enable register captcha"
+msgstr "کد امنیتی را در فرم نام نویسی فعال کن!"
+
+#: ../inc/settings.php:91
+msgid "This option enables captcha on registration form."
+msgstr ""
+"با فعال کردن این گزینه، می توانید کد امنیتی را در فرم نام نویسی، فعال کنید."
+
+#: ../inc/settings.php:96
+msgid "Enable lostpass captcha"
+msgstr "کد امنیتی را در فرم بازیابی رمز، فعال کن!"
+
+#: ../inc/settings.php:99
+msgid "This option enables captcha on lostpass form."
+msgstr ""
+"با فعال کردن این گزینه، می توانید کد امنیتی را در فرم بازیابی رمز، فعال کنید."
+
+#: ../inc/settings.php:104
 msgid "Default buttons"
 msgstr "طرح دکمه پیشفرض"
 
-#: ../inc/settings.php:86
+#: ../inc/settings.php:113
 msgid "choose your button style."
 msgstr "یک طرح را برای دکمه ورود انتخاب کنید"
 
-#: ../inc/settings.php:92
+#: ../inc/settings.php:119
 msgid "Button sizes"
 msgstr "اندازه دکمه پیوند"
 
-#: ../inc/settings.php:98
+#: ../inc/settings.php:125
 msgid "choose your button size."
 msgstr "یک سایز را برای دکمه ورود انتخاب کنید."
 
-#: ../inc/settings.php:104
+#: ../inc/settings.php:131
 msgid "login redirect URL"
 msgstr "لینک تغییر مسیر ورود"
 
-#: ../inc/settings.php:109
+#: ../inc/settings.php:136
 msgid "Registration redirect URL"
 msgstr "لینک تغییر مسیر عضویت"
 
-#: ../inc/settings.php:114
+#: ../inc/settings.php:141
 msgid "Like this plugin?"
 msgstr "از این افزونه خوشتون اومد؟"
 
-#: ../inc/settings.php:116
+#: ../inc/settings.php:143
 msgid ""
 "Show your support by Rating 5 Star in <a href=\"http://wordpress.org/plugins/"
 "ajax-bootmodal-login\"> Plugin Directory reviews</a>"
@@ -216,14 +249,14 @@ msgstr ""
 "با امتیاز 5 ستاره  در <a href=\"http://wordpress.org/plugins/ajax-bootmodal-"
 "login\">مخزن وردپرس</a> از این افزونه حمایت کنید..."
 
-#: ../inc/settings.php:117
+#: ../inc/settings.php:144
 msgid ""
 "Follow me on <a href=\"https://www.facebook.com/alimir.ir\"> Facebook</a>"
 msgstr ""
 "دنیای وردپرس و برنامه نویسی را در  <a href=\"https://www.facebook.com/alimir."
 "ir\"> فیسبوک</a> دنبال کنید..."
 
-#: ../inc/settings.php:120
+#: ../inc/settings.php:147
 msgid ""
 "Plugin Author Blog: <a href=\"http://alimir.ir\"> Wordpress & Programming "
 "World.</a>"
@@ -259,25 +292,35 @@ msgstr "نام کاربری"
 msgid "Password"
 msgstr "رمز عبور"
 
-#: ../tmp/login-form.php:14
+#: ../tmp/login-form.php:14 ../tmp/lostpass-form.php:13
+#: ../tmp/registrer-form.php:14
+msgid "Captcha"
+msgstr "کد امنیتی"
+
+#: ../tmp/login-form.php:15 ../tmp/lostpass-form.php:14
+#: ../tmp/registrer-form.php:15
+msgid "Click to refresh captcha"
+msgstr "برای تازه سازی کد، روی تصویر کلیک کنید"
+
+#: ../tmp/login-form.php:19
 msgid "Remember Me"
 msgstr "مرا به خاطر بسپار"
 
-#: ../tmp/login-form.php:17
+#: ../tmp/login-form.php:22
 msgid "Not registered?"
 msgstr "نام نویسی نکرده اید؟!؟"
 
-#: ../tmp/login-form.php:18
+#: ../tmp/login-form.php:24
 msgid "Lost your password?"
 msgstr "رمزتان را گم کرده اید؟"
 
-#: ../tmp/login-form.php:23 ../tmp/lostpass-form.php:16
-#: ../tmp/registrer-form.php:18
+#: ../tmp/login-form.php:28 ../tmp/lostpass-form.php:21
+#: ../tmp/registrer-form.php:23
 msgid "loading..."
 msgstr "در حال بارگذاری..."
 
-#: ../tmp/login-form.php:23 ../tmp/lostpass-form.php:16
-#: ../tmp/registrer-form.php:18
+#: ../tmp/login-form.php:28 ../tmp/lostpass-form.php:21
+#: ../tmp/registrer-form.php:23
 msgid "Submit"
 msgstr "ورود"
 
@@ -297,7 +340,7 @@ msgstr ""
 msgid "Username or Email"
 msgstr "نام کاربری یا ایمیل"
 
-#: ../tmp/lostpass-form.php:12
+#: ../tmp/lostpass-form.php:17
 msgid "Log in"
 msgstr "ورود"
 
@@ -309,11 +352,11 @@ msgstr "نام نویسی"
 msgid "E-mail"
 msgstr "ایمیل"
 
-#: ../tmp/registrer-form.php:13
+#: ../tmp/registrer-form.php:18
 msgid "Already registered? Login"
 msgstr "پیش از این نام نویسی کرده اید؟ وارد شوید"
 
-#: ../tmp/registrer-form.php:14
+#: ../tmp/registrer-form.php:19
 msgid "A password will be emailed to you."
 msgstr "رمز با نامه برای شما فرستاده خواهد شد."
 

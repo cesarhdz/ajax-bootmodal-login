@@ -9,6 +9,11 @@
     <div class="row-fluid control-group">
 		<label><?php _e('Username or Email','alimir'); ?>
         <input type="text" name="lost_pass" id="lost_pass" class="span12" value="" /></label>
+		<?php if (get_option( 'enable_lostpass_captcha' ) == 1):?>
+		<label><?php _e('Captcha','alimir'); ?>
+		<img style="margin:5px auto;display:block;" alt="captcha" id="lostpass_captcha_img" data-toggle="tooltip" title="<?php _e('Click to refresh captcha','alimir'); ?>" src="<?php echo plugins_url( 'captcha/lost-captcha.php' , __FILE__ );?>" />
+        <input type="text" name="lostpass_captcha" id="lostpass_captcha" class="span12" value="" /></label>
+		<?php endif; ?>
 		<span class="label label-info"><a href="#login_tab" data-toggle="tab"><?php _e('Log in','alimir'); ?></a></span>
     </div>
   </div>

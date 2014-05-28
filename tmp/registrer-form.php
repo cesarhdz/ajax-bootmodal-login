@@ -10,6 +10,11 @@
         <input type="text" name="user_login" id="user_login" class="span12" value="" /></label>
 		<label><?php _e('E-mail','alimir'); ?>
         <input type="text" name="user_email" id="user_email" class="span12" value="" /></label>
+		<?php if (get_option( 'enable_register_captcha' ) == 1):?>
+		<label><?php _e('Captcha','alimir'); ?>
+		<img style="margin:5px auto;display:block;" alt="captcha" id="register_captcha_img" data-toggle="tooltip" title="<?php _e('Click to refresh captcha','alimir'); ?>" src="<?php echo plugins_url( 'captcha/reg-captcha.php' , __FILE__ );?>" />
+        <input type="text" name="register_captcha" id="register_captcha" class="span12" value="" /></label>
+		<?php endif; ?>
 		<span class="label label-info"><a href="#login_tab" data-toggle="tab"><?php _e('Already registered? Login','alimir'); ?></a></span>
 		<span class="label"><?php echo _e('A password will be emailed to you.','alimir') ?></span>
     </div>
