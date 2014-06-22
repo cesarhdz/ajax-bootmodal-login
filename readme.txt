@@ -5,7 +5,7 @@ Author: Ali Mirzaei
 Tags: login,wordpress Login,Wordpress ABM-Login Plugin,ABM Login,bootstrap login form,custom login widget,wordpress modal login,wp ajax login,wordpress login with bootstrap,ajaxy
 Requires at least: 3.1
 Tested up to: 3.9.1
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,6 +21,7 @@ Ajax BootModal Login is a WordPress plugin that is powered by bootstrap and ajax
 *   Bootstrap support.
 *   Simple configuration panel.
 *   Full ajax login, registration and lost password forms.
+*   Captcha support in all forms.
 *   User profile support.
 *   And so on...
 
@@ -29,7 +30,7 @@ Ajax BootModal Login is a WordPress plugin that is powered by bootstrap and ajax
 
 = Plugin Author =
 My personal website: <a href="http://about.alimir.ir" target="_blank">Ali Mirzaei</a><br />
-Follow me on <a href="https://www.facebook.com/alimir.ir" target="_blank">facebook</a>
+Follow me on <a href="https://www.facebook.com/alimir.ir" target="_blank">Facebook</a>
 
 == Installation ==
 
@@ -41,6 +42,9 @@ Follow me on <a href="https://www.facebook.com/alimir.ir" target="_blank">facebo
 Screenshots are available in <a href="http://preview.alimir.ir/ajax-bootmodal-login-plugin/" target="_blank">here</a>
 
 == Changelog ==
+
+= 1.2.2 =
+* Fixes: Small bug in captcha settings.
 
 = 1.2.1 =
 * Adding captcha ability in all the forms.
@@ -75,6 +79,9 @@ Screenshots are available in <a href="http://preview.alimir.ir/ajax-bootmodal-lo
 * The initial version
 
 == Upgrade Notice ==
+
+= 1.2.2 =
+Fixes: Small bug in captcha settings.
 
 = 1.2.1 =
 you can go to setting panel and activate the captcha in each form.

@@ -3,7 +3,7 @@
 Plugin Name: Ajax BootModal Login
 Plugin URI: http://wordpress.org/plugins/ajax-bootmodal-login
 Description: Ajax BootModal Login is a WordPress plugin that is powered by bootstrap and ajax for better login, registration or lost password and display the user profile with beautiful shape. It is an easy to use WordPress plugin and can be configured quickly.
-Version: 1.2.1
+Version: 1.2.2
 Author: Ali Mirzaei
 Author URI: http://alimir.ir
 License: GPLv2 or later

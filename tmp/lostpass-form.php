@@ -1,6 +1,6 @@
 <form id="passform" action="lostpassword" method="post">
   <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&#215;</button>
+    <button type="button" class="close" data-dismiss="modal">&#215;</button>
     <h3><?php _e('User LostPassword','alimir'); ?></h3>
   </div> 
   <div class="modal-body">

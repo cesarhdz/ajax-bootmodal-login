@@ -44,10 +44,10 @@ function alimir_bootModal_ajax_login(){
 	$credentials['remember'] = false;
 	endif;
 	
-	if ( $credentials['user_login'] == null || $credentials['user_password'] == null || ($login_captcha == null && get_option( 'enable_login_captcha' ) == 1 )  ){
+	if ( $credentials['user_login'] == null || $credentials['user_password'] == null || (get_option( 'enable_login_captcha' ) == 1 and $login_captcha == null) ){
 		echo json_encode(array('loggedin'=>false, 'message'=>__('<p class="alert alert-info" data-alert="alert">Please fill all the fields.</p>','alimir')));
 	}
-	else if(!strCmp(strToUpper($_SESSION['login_captcha']),strToUpper($login_captcha)) == 0 && get_option( 'enable_login_captcha' ) == 1){
+	else if( get_option( 'enable_login_captcha' ) == 1 and !strCmp(strToUpper($_SESSION['login_captcha']),strToUpper($login_captcha)) == 0 ){
 		echo json_encode(array('loggedin'=>false, 'message'=>__('<p class="alert alert-error" data-alert="alert">captcha invalid.</p>','alimir')));
 	}
 	else{
@@ -77,10 +77,10 @@ function alimir_bootModal_ajax_registration() {
 	if(isset($_POST['register_captcha']))
 	$register_captcha = $_POST['register_captcha'];
 	
-	if ( $user_login == null || $user_email == null|| ($register_captcha == null && get_option( 'enable_register_captcha' ) == 1)){
+	if ( $user_login == null || $user_email == null|| (get_option( 'enable_register_captcha' ) == 1 and $register_captcha == null)){
 		echo json_encode(array('registered'=>false, 'message'=>__('<p class="alert alert-info" data-alert="alert">Please fill all the fields.</p>','alimir')));
 	}
-	else if(!strCmp(strToUpper($_SESSION['register_captcha']),strToUpper($register_captcha)) == 0 && get_option( 'enable_register_captcha' ) == 1){
+	else if(get_option( 'enable_register_captcha' ) == 1 and !strCmp(strToUpper($_SESSION['register_captcha']),strToUpper($register_captcha)) == 0){
 		echo json_encode(array('registered'=>false, 'message'=>__('<p class="alert alert-error" data-alert="alert">captcha invalid.</p>','alimir')));
 	}
 	else{
@@ -122,10 +122,10 @@ function alimir_bootModal_ajax_lostPassword() {
 	$lostpass_captcha = $_POST['lostpass_captcha'];
 	
 	
-	if ( $lost_pass == null || ($lostpass_captcha == null && get_option( 'enable_lostpass_captcha' ) == 1)){
+	if ( $lost_pass == null || (get_option( 'enable_lostpass_captcha' ) == 1 and $lostpass_captcha == null )){
 		echo json_encode(array('reset'=>false, 'message'=>__('<p class="alert alert-info" data-alert="alert">Please fill all the fields.</p>','alimir')));
 	}
-	else if(!strCmp(strToUpper($_SESSION['lostpass_captcha']),strToUpper($lostpass_captcha)) == 0 && get_option( 'enable_lostpass_captcha' ) == 1){
+	else if(get_option( 'enable_lostpass_captcha' ) == 1 and !strCmp(strToUpper($_SESSION['lostpass_captcha']),strToUpper($lostpass_captcha)) == 0){
 		echo json_encode(array('reset'=>false, 'message'=>__('<p class="alert alert-error" data-alert="alert">captcha invalid.</p>','alimir')));
 	}
 	else{
