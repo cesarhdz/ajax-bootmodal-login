@@ -1,4 +1,33 @@
 <?php 
+
+
+function get_bootmodal_template_path($template){
+	return  plugin_dir_path( dirname(__FILE__)) . '/tmp/' . $template;
+}
+
+function get_bootmodal_user_path($template){
+	return 'plugins/bootmodel-login/' . $template;
+}
+
+
+/**
+ * Loads templates that user can custimize
+ * @param  String $template Name of the template without extension
+ * @return void
+ */
+function load_bootmodal_template($template){
+	$userTemplate = $config['templates.user'] . $template;
+
+	var_dump(get_bootmodal_user_path($userTemplate));
+
+	if(locate_template(get_bootmodal_user_path($userTemplate) . '.php'))
+		get_template_part(get_bootmodal_user_path($userTemplate));
+
+	else
+		include get_bootmodal_template_path($template) . '.php';
+}
+
+
 function login_button_text(){
 	if (!is_user_logged_in()):
 	if (get_option('button_text') == null):
