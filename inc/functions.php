@@ -18,8 +18,6 @@ function get_bootmodal_user_path($template){
 function load_bootmodal_template($template){
 	$userTemplate = $config['templates.user'] . $template;
 
-	var_dump(get_bootmodal_user_path($userTemplate));
-
 	if(locate_template(get_bootmodal_user_path($userTemplate) . '.php'))
 		get_template_part(get_bootmodal_user_path($userTemplate));
 
